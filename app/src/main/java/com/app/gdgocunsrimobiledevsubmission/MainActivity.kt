@@ -47,7 +47,7 @@ fun FindJackpot() {
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Nilai: $counter",
+            text = "$counter",
             fontSize = 56.sp,
             modifier = Modifier.padding(bottom = 16.dp),
             color = MaterialTheme.colorScheme.primary,
@@ -66,29 +66,31 @@ fun FindJackpot() {
             color = MaterialTheme.colorScheme.outline
         )
 
-        if (isButtonEnabled) {
-            Button(
-                onClick = {
-                    counter++
-                    val isGanjil = counter % 2 != 0
+        Button(
+            onClick = {
+                counter++
+                val isGanjil = counter % 2 != 0
 
-                    if (isGanjil && counter > 10) {
-                        if (Random.nextDouble() <= probabilitas) {
-                            isButtonEnabled = false
-                            showDialog = true
-                        } else {
-                            NonJackpot++
-                            if (NonJackpot >= 1) {
-                                probabilitas = minOf(probabilitas + 0.01, 0.05)
-                            }
+                if (isGanjil && counter > 10) {
+                    if (Random.nextDouble() <= probabilitas) {
+                        isButtonEnabled = false
+                        showDialog = true
+                    } else {
+                        NonJackpot++
+                        if (NonJackpot >= 1) {
+                            probabilitas = minOf(probabilitas + 0.01, 0.05)
                         }
                     }
-                },
-                modifier = Modifier.padding(16.dp)
-            ) {
-                Text("Cari Jackpot Anda!")
-            }
-        } else {
+                }
+            },
+            enabled = isButtonEnabled,
+            modifier = Modifier.padding(bottom = 8.dp)
+        ) {
+            Text("Cari Jackpot Anda!")
+        }
+
+        // Tombol baru untuk mulai lagi yang muncul saat jackpot ditemukan
+        if (!isButtonEnabled) {
             Button(
                 onClick = {
                     counter = 0
@@ -96,7 +98,7 @@ fun FindJackpot() {
                     isButtonEnabled = true
                     NonJackpot = 0
                 },
-                modifier = Modifier.padding(16.dp)
+                modifier = Modifier.padding(top = 8.dp)
             ) {
                 Text("Mulai Lagi")
             }
