@@ -23,7 +23,6 @@ class MainActivity : ComponentActivity() {
             GDGOCUnsriMobileDevSubmissionTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-//                    color = MaterialTheme.colorScheme.background
                 ) {
                     FindJackpot()
                 }
@@ -49,14 +48,14 @@ fun FindJackpot() {
     ) {
         Text(
             text = "Nilai: $counter",
-            fontSize = 24.sp,
+            fontSize = 56.sp,
             modifier = Modifier.padding(bottom = 16.dp),
             color = MaterialTheme.colorScheme.primary,
             fontWeight = FontWeight.Medium
         )
         Text(
             text = if (counter % 2 == 0) "Genap" else "Ganjil",
-            fontSize = 18.sp,
+            fontSize = 24.sp,
             modifier = Modifier.padding(bottom = 16.dp),
             color = MaterialTheme.colorScheme.primary
         )
@@ -66,27 +65,41 @@ fun FindJackpot() {
             modifier = Modifier.padding(bottom = 24.dp),
             color = MaterialTheme.colorScheme.outline
         )
-        Button(
-            onClick = {
-                counter++
-                val isGanjil = counter % 2 != 0
 
-                if (isGanjil && counter > 10) {
-                    if (Random.nextDouble() <= probabilitas) {
-                        isButtonEnabled = false
-                        showDialog = true
-                    } else {
-                        NonJackpot++
-                        if (NonJackpot >= 1) {
-                            probabilitas = minOf(probabilitas + 0.01, 0.05)
+        if (isButtonEnabled) {
+            Button(
+                onClick = {
+                    counter++
+                    val isGanjil = counter % 2 != 0
+
+                    if (isGanjil && counter > 10) {
+                        if (Random.nextDouble() <= probabilitas) {
+                            isButtonEnabled = false
+                            showDialog = true
+                        } else {
+                            NonJackpot++
+                            if (NonJackpot >= 1) {
+                                probabilitas = minOf(probabilitas + 0.01, 0.05)
+                            }
                         }
                     }
-                }
-            },
-            enabled = isButtonEnabled,
-            modifier = Modifier.padding(16.dp)
-        ) {
-            Text("Tambah Nilai")
+                },
+                modifier = Modifier.padding(16.dp)
+            ) {
+                Text("Cari Jackpot Anda!")
+            }
+        } else {
+            Button(
+                onClick = {
+                    counter = 0
+                    probabilitas = 0.01
+                    isButtonEnabled = true
+                    NonJackpot = 0
+                },
+                modifier = Modifier.padding(16.dp)
+            ) {
+                Text("Mulai Lagi")
+            }
         }
 
         if (showDialog) {
@@ -107,7 +120,7 @@ fun FindJackpot() {
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Text(
-                            text = "Selamat! Jackpot-mu ada di angka $counter",
+                            text = "Selamat! Anda 'Jackpot' pada angka $counter",
                             fontSize = 18.sp,
                             color = MaterialTheme.colorScheme.primary,
                             textAlign = TextAlign.Start
