@@ -9,7 +9,7 @@ Aplikasi ini memungkinkan pengguna untuk meningkatkan nilai sebuah variabel deng
 2. **Ganjil atau Genap**: Setelah tombol ditekan, aplikasi akan menampilkan apakah nilai yang baru **ganjil** atau **genap**.
 3. **Jackpot**: Ketika nilai ganjil dan lebih besar dari 10, aplikasi akan menghitung probabilitas untuk menentukan apakah Anda mendapatkan Jackpot. Jika mendapatkan Jackpot, tombol akan dinonaktifkan dan sebuah dialog akan muncul memberi tahu Anda tentang keberhasilan tersebut.
 
-## Teknologi yang Digunakan:
+## Tech Stack:
 - **Jetpack Compose**
 - **Kotlin**
 
