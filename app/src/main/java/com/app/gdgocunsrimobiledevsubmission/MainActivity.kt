@@ -8,6 +8,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -49,18 +50,44 @@ fun FindJackpot() {
         Text(
             text = "Nilai: $counter",
             fontSize = 24.sp,
-            modifier = Modifier.padding(bottom = 16.dp)
+            modifier = Modifier.padding(bottom = 16.dp),
+            color = MaterialTheme.colorScheme.primary,
+            fontWeight = FontWeight.Medium
         )
         Text(
             text = if (counter % 2 == 0) "Genap" else "Ganjil",
             fontSize = 18.sp,
-            modifier = Modifier.padding(bottom = 16.dp)
+            modifier = Modifier.padding(bottom = 16.dp),
+            color = MaterialTheme.colorScheme.primary
         )
         Text(
             text = "Probabilitas Jackpot: ${String.format("%.0f", probabilitas * 100)}%",
             fontSize = 16.sp,
-            modifier = Modifier.padding(bottom = 24.dp)
+            modifier = Modifier.padding(bottom = 24.dp),
+            color = MaterialTheme.colorScheme.outline
         )
+        Button(
+            onClick = {
+                counter++
+                val isGanjil = counter % 2 != 0
+
+                if (isGanjil && counter > 10) {
+                    if (Random.nextDouble() <= probabilitas) {
+                        isButtonEnabled = false
+                        showDialog = true
+                    } else {
+                        NonJackpot++
+                        if (NonJackpot >= 1) {
+                            probabilitas = minOf(probabilitas + 0.01, 0.05)
+                        }
+                    }
+                }
+            },
+            enabled = isButtonEnabled,
+            modifier = Modifier.padding(16.dp)
+        ) {
+            Text("Tambah Nilai")
+        }
     }
 }
 
