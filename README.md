@@ -10,8 +10,8 @@ Aplikasi ini memungkinkan pengguna untuk meningkatkan nilai sebuah variabel deng
 3. **Jackpot**: Ketika nilai ganjil dan lebih besar dari 10, aplikasi akan menghitung probabilitas untuk menentukan apakah Anda mendapatkan Jackpot. Jika mendapatkan Jackpot, tombol akan dinonaktifkan dan sebuah dialog akan muncul memberi tahu Anda tentang keberhasilan tersebut.
 
 ## Teknologi yang Digunakan:
-- **Jetpack Compose**: Untuk tampilan UI modern dan responsif.
-- **Kotlin**: Bahasa pemrograman utama untuk pengembangan aplikasi Android.
+- **Jetpack Compose**
+- **Kotlin**
 
 ## Instalasi:
 1. Clone atau unduh repositori ini.
@@ -21,8 +21,6 @@ Aplikasi ini memungkinkan pengguna untuk meningkatkan nilai sebuah variabel deng
 ## File Unduhan:
 Untuk mengunduh APK aplikasi, klik tautan berikut:
 [Download APK](https://drive.google.com/file/d/1qrVyzgUaLYr0NUYXbDnkZRYKiTLMvNJ9/view?usp=drive_link)
-
-Gantilah `YOUR_FILE_ID` dengan ID file Google Drive Anda yang sesuai, atau gunakan tautan dari platform hosting lainnya jika Anda mengunggahnya di tempat lain.
 
 ## Screenshots:
 Berikut adalah beberapa tangkapan layar dari aplikasi ini:
