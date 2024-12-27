@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
             GDGOCUnsriMobileDevSubmissionTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+//                    color = MaterialTheme.colorScheme.background
                 ) {
                     FindJackpot()
                 }
@@ -87,6 +87,45 @@ fun FindJackpot() {
             modifier = Modifier.padding(16.dp)
         ) {
             Text("Tambah Nilai")
+        }
+
+        if (showDialog) {
+            AlertDialog(
+                onDismissRequest = { showDialog = false },
+                title = {
+                    Text(
+                        text = "Jackpot! 🎉",
+                        fontSize = 24.sp,
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colorScheme.primary,
+                        fontWeight = FontWeight.Medium
+                    )
+                },
+                text = {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(
+                            text = "Selamat! Jackpot-mu ada di angka $counter",
+                            fontSize = 18.sp,
+                            color = MaterialTheme.colorScheme.primary,
+                            textAlign = TextAlign.Start
+                        )
+                    }
+                },
+                confirmButton = {
+                    TextButton(
+                        onClick = { showDialog = false }
+                    ) {
+                        Text(
+                            text = "OK",
+                            fontSize = 16.sp,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                }
+            )
         }
     }
 }
