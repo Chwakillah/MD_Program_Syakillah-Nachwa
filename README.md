@@ -18,11 +18,17 @@ Aplikasi ini memungkinkan pengguna untuk meningkatkan nilai sebuah variabel deng
 2. Buka proyek di Android Studio.
 3. Bangun dan jalankan aplikasi pada perangkat Android-mu.
 
+## File Unduhan:
+Untuk mengunduh APK aplikasi, klik tautan berikut:
+[Download APK](https://drive.google.com/uc?id=YOUR_FILE_ID)
+
+Gantilah `YOUR_FILE_ID` dengan ID file Google Drive Anda yang sesuai, atau gunakan tautan dari platform hosting lainnya jika Anda mengunggahnya di tempat lain.
+
 ## Screenshots:
 Berikut adalah beberapa tangkapan layar dari aplikasi ini:
 
-![Contoh Tampilan 1](https://drive.google.com/uc?id=1oAjcj5zfMbNJonC9dAKYXVXM_0W4gOpN)
 ![Contoh Tampilan 2](https://drive.google.com/uc?id=1tyYtGrMawl9DmDN16Y1H0rGgntwLYBgi)
+![Contoh Tampilan 1](https://drive.google.com/uc?id=1oAjcj5zfMbNJonC9dAKYXVXM_0W4gOpN)
 
 ## Made By:
 Syakillah Nachwa for opsional submission Mobile Development GDGOC UNSRI
