@@ -25,8 +25,8 @@ Untuk mengunduh APK aplikasi, klik tautan berikut:
 ## Screenshots:
 Berikut adalah beberapa tangkapan layar dari aplikasi ini:
 
-![Contoh Tampilan 2](https://drive.google.com/file/d/1e5J6bAzO3i8l9ThApwvEqUwMWJliKhS0/view?usp=drive_link)
-![Contoh Tampilan 1](https://drive.google.com/file/d/14AbfF7aPPCPD9sUOnoq2Z3ESF-b0kLuH/view?usp=drive_link)
+![Contoh Tampilan 2]([https://drive.google.com/file/d/1e5J6bAzO3i8l9ThApwvEqUwMWJliKhS0/view?usp=drive_link](https://drive.google.com/file/d/1e5J6bAzO3i8l9ThApwvEqUwMWJliKhS0/view?usp=sharing))
+![Contoh Tampilan 1]([https://drive.google.com/file/d/14AbfF7aPPCPD9sUOnoq2Z3ESF-b0kLuH/view?usp=drive_link](https://drive.google.com/file/d/14AbfF7aPPCPD9sUOnoq2Z3ESF-b0kLuH/view?usp=sharing))
 
 ## Made By:
 Syakillah Nachwa for opsional submission Mobile Development GDGOC UNSRI
