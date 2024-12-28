@@ -1,7 +1,4 @@
 # Jackpot Counter App 🎉
-
-Selamat datang di **Jackpot Counter App**, aplikasi sederhana namun seru untuk menguji keberuntunganmu! 🎰
-
 Aplikasi ini memungkinkan pengguna untuk meningkatkan nilai sebuah variabel dengan menekan tombol. Setiap penambahan nilai akan memeriksa apakah angka tersebut memenuhi kriteria **"Jackpot"**. Jika nilai tersebut **ganjil** dan lebih besar dari 10, aplikasi akan memeriksa apakah Anda mendapatkan **Jackpot** berdasarkan probabilitas yang terus meningkat setiap kali tidak mendapatkan Jackpot.
 
 ## Cara Menggunakan:
